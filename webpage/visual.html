@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link href="./assets/css/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/visual.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/alert.css">
+    <link rel="icon" type="image/png" href="./assets/images/icon_small.png">
+    <title>Go Visual</title>
+</head>
+<body>
+    <header>
+        <div class="title" id="title">
+            <div class="icon">
+                <img src="./assets/images/icon.gif" alt="" id="switch" onclick="Switch();">
+            </div>
+            <div class="name">
+                <a href="./index.html">Go Visual</a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li id="start-btn"><a href="./visual.html">Start</a></li>
+                <li><a href="./learn.html">Learn</a></li>
+                <li id="lang-switch">
+                    <label class="switch" onclick="SwitchLanguage(); TranslateButtons();">
+                        <input type="checkbox">
+                        <span class="slider round" onclick="SwitchLanguage(); TranslateButtons();"></span>
+                        <span class="labels" data-on="EN" data-off="RU" onclick="SwitchLanguage(); TranslateButtons();"></span>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="alert" style="display: none;" id="alert">
+        <div class="msg" id="msg">
+            This is an alert.
+        </div>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+    </div>
+    <div class="wrapper">
+        <div class="header-spacer"></div>
+        <div class="main">
+            <h1 class="en">
+                Visualisation
+            </h1>
+            <h1 class="ru" style="display: none;">
+                Визуализация
+            </h1>
+            <div class="settings">
+                <div class="dropdown">
+                    <div class="dropdown-select" id="select" onclick="Select();">
+                        <div class="select en">
+                            Select Algorithm
+                        </div>
+                        <div class="select ru" style="display: none;">
+                            Выберите Алгоритм
+                        </div>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                    <div class="list" id="list" style="display: none;">
+                        <div class="item" onclick="SelectItem(1);">
+                            <a id="bubble">Bubble Sort Alqorithm</a>
+                        </div>
+                        <div class="item" onclick="SelectItem(2);">
+                            <a id="insertion">Insertion Sort Alqorithm</a>
+                        </div>
+                        <div class="item" onclick="SelectItem(3);">
+                            <a id="quick">Quick Sort Alqorithm</a>
+                        </div>
+                        <div class="item" onclick="SelectItem(4);">
+                            <a id="merge">Merge Sort Alqorithm</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="array-stats">
+                    <div class="array" id="array">
+                        <input type="text" name="array" onkeyup="SetBox();" id="array-data" placeholder="Input array elements, for expample: 1 8.7 -2 6 10">
+                    </div>
+                    <div class="buttons-settings">
+                        <div class="order">
+                            <div class="order-btn" id="order" onclick="ChangeOrder();">
+                                Order ASC
+                                <i class="fas fa-arrow-up"></i>
+                            </div>
+                        </div>
+                        <div class="random">
+                            <div class="random-btn" id="random" onclick="Random();">
+                                Random
+                            </div>
+                        </div>
+                        <div class="delay">
+                            <div class="range">
+                                <input type="range" name="delay" id="delay" min="1" max="3000" value="1500" oninput="Delay();">
+                            </div>
+                            <div class="info" id="delay-info">
+                                Delay: 1500ms
+                            </div>
+                        </div>
+                    </div>
+                    <div class="statistics">
+                        <div class="actions" id="actions">
+                            
+                        </div>
+                        <div class="swaps" id="swaps">
+                            
+                        </div>
+                        <div class="swaps" id="num">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="box">
+                
+            </div>
+            <div class="buttons">
+                <div class="start" id="start" onclick="Start();">
+                    Start
+                </div>
+                <div class="start" id="reset" onclick="Reset();">
+                    Reset
+                </div>
+                <div class="stop" id="stop" onclick="Stop();">
+                    Clear
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2022 Designed by Arina Rybakova</p>
+        </div>
+    </footer>
+</body>
+<script src="./assets/js/theme.js"></script>
+<script src="./assets/js/lib.js"></script>
+<script src="./assets/js/alert.js"></script>
+<script src="./assets/js/visual.js"></script>
+<script src="./assets/js/translate.js"></script>
+<script src="./assets/js/translate_start.js"></script>
+</html>

@@ -1,0 +1,113 @@
+.wrapper h1 {
+    text-align: center;
+    font-size: 40px;
+    color: var(--white);
+    padding: 40px;
+    width: 90%;
+}
+
+.wrapper .theory-part {
+    width: 90%;
+    border-top: 2px solid var(--white);
+    margin-bottom: 40px;
+}
+
+.wrapper .theory-part h2 {
+    width: 100%;
+    color: var(--white);
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+}
+
+.theory-part p {
+    width: 100%;
+    color: var(--white);
+    text-align: center;
+    font-size: 25px;
+    text-align: left;
+    line-height: 30px;
+}
+
+#code {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0;
+    list-style: decimal;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#line {
+    color: var(--white);
+    text-decoration: solid;
+    padding: 0 20px;
+    font-size: 22px;
+}
+
+.theory-part .image-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theory-part .image-wrapper img {
+    border-radius: 10px;
+    max-width: 100%;
+    margin: 20px;
+}
+
+@media only screen and (max-width: 480px) {
+    .wrapper h1 {
+        text-align: center;
+        font-size: 30px;
+        color: var(--white);
+        padding: 20px;
+        width: 100%;
+    }
+    
+    .wrapper .theory-part {
+        width: 90%;
+        border-top: 2px solid var(--white);
+        margin-bottom: 30px;
+    }
+    
+    .wrapper .theory-part h2 {
+        width: 95%;
+        color: var(--white);
+        text-align: center;
+        font-size: 25px;
+        padding: 20px;
+    }
+    
+    .theory-part p {
+        width: 90%;
+        color: var(--white);
+        text-align: center;
+        font-size: 20px;
+        text-align: left;
+        line-height: 30px;
+    }
+    
+    #code {
+        width: 80%;
+        margin: 0 auto;
+        padding: 25px 0;
+        list-style: decimal;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    #line {
+        color: var(--white);
+        text-decoration: solid;
+        padding: 0 20px;
+        font-size: 18px;
+    }
+
+}

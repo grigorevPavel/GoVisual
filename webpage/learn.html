@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link href="./assets/css/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/learn.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="icon" type="image/png" href="./assets/images/icon_small.png">
+    <title>Go Visual</title>
+</head>
+<body>
+    <header>
+        <div class="title" id="title">
+            <div class="icon">
+                <img src="./assets/images/icon.gif" alt="" id="switch" onclick="Switch();">
+            </div>
+            <div class="name">
+                <a href="./index.html">Go Visual</a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li id="start-btn"><a href="./visual.html">Start</a></li>
+                <li><a href="./learn.html">Learn</a></li>
+                <li id="lang-switch">
+                    <label class="switch" onclick="SwitchLanguage();">
+                        <input type="checkbox">
+                        <span class="slider round" onclick="SwitchLanguage();"></span>
+                        <span class="labels" data-on="EN" data-off="RU" onclick="SwitchLanguage(); TranslateButtons();"></span>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <div class="header-spacer"></div>
+        <h1 class="en">
+            Learn
+        </h1>
+        <h1 class="ru" style="display: none;">
+            Теория
+        </h1>
+        <div class="theory-part">
+            <h2 class="en">
+                Introduction to the Concept of Asymptotics
+            </h2>
+            <h2 class="ru" style="display: none;">
+                Введение в концепцию асимптотики
+            </h2>
+            <p class="en">
+                The asymptotic complexity of algorithms represents the time and memory that your program will need during execution. 
+                It is customary to estimate the running time of the program through the number of primitive operations that the program performs.
+                It is believed that primitive operations are performed in some constant time, which does not depend on the set of input data for the program.
+                Let's look at examples of such operations:
+            </p>
+            <p class="ru" style="display: none;">
+                Асимптотическая сложность алгоритмов представляет время и память, которые понадобятся вашей программе во время выполнения. 
+                Обычно время выполнения программы оценивается по количеству выполняемых программой примитивных операций.
+                Считается, что примитивные операции выполняются за некоторое постоянное время, которое не зависит от набора входных данных для программы.
+                Давайте рассмотрим примеры таких операций:
+            </p>
+            <ul id="code">
+                <li id="line">
+                    a = b + c
+                </li>
+                <li id="line">
+                    a = b / c
+                </li>
+                <li id="line">
+                    if condition == False:
+                </li>
+                <li id="line">
+                    array.append(x)
+                </li>
+            </ul>
+            <p class="en">
+                Here we assume that arithmetic operations, logical comparisons, and adding an element to an array are performed in constant time.<br>
+                Let 's talk about the concept of big O.
+                $$ f(x) = \overline O(g(x)) $$ 
+                $$ \exists \ C \in R : |f(x)| \leq C \cdot |g(x)|$$
+                Let's consider some basic cases.
+                $$ \overline O( 1 \ ) = const $$
+                $$ \overline O( \log N ) \leq \log N $$
+                $$ \overline O( N ) \leq  N $$
+                $$ \overline O( N \log N ) \leq  N \log N$$
+                $$ \overline O( N^2 \ ) \leq  N^2 $$
+                Basically, big O shows the growth rate of a certain function F relatively to function G.
+            </p>
+            <p class="ru" style="display: none;">
+                Здесь мы предполагаем, что арифметические операции, логические сравнения и добавление элемента в массив выполняются за постоянное время.<br>
+                Давайте поговорим о концепции O-большого.
+                $$ f(x) = \overline O(g(x)) $$
+                $$ \exists \ C \in R : |f(x)| \leq C \cdot |g(x)|$$
+                Давайте рассмотрим некоторые основные случаи.
+                $$ \overline O( 1 \ ) = const $$
+                $$ \overline O( \log N ) \leq \log N $$
+                $$ \overline O( N ) \leq N $$
+                $$ \overline O( N \log N ) \leq N \log N$$
+                $$ \overline O( N^2 \ ) \leq N^2 $$
+                По сути, O показывает скорость роста определенной функции F относительно функции G.
+            </p>
+        </div>
+
+        <div class="theory-part">
+            <h2 class="en">
+                Bubble Sort Algorithm
+            </h2>
+            <h2 class="ru" style="display: none;">
+                Пузырьковая сортировка
+            </h2>
+            <p>
+                <div class="image-wrapper">
+                    <img src="./assets/images/bubble.png" alt="" srcset="">
+                </div>
+            </p>
+            <p class="en">
+                Let us give some breif description of the algorithm idea. 
+                At each step of the algorithm, the k-th element in order pops up to the k-th position on the right.
+                Iterating over the array the following way we will get the greatest element on the right, teh smallest on the left, moreover all the elements between will also be sorted.<br>
+                Now let us evaluate the difiiculty of the Bubble Sort algorithm by calculating it`s asymptotic:<br>
+                For each element the algorithm performs a cycle from 0 to array length - 1. Which means ~ O(N) iterations, each containing a conctant number of iterations ~ O(1).
+                So we have O(1) * O(N) iterations for each element. In an array there are N elements, what leads to total asymptotic O(N) * O(N).
+                $$ O(N \ ) \cdot O(N \ ) = O(N^2)$$
+                We wil proove that even though Bubble Sort is the easiest sort alg to write, it definitely is one of the slowest ones. Bubble Sort is being used in production code relatively rarely.
+            </p>
+            <p class="ru" style="display: none;">
+                Давайте дадим краткое описание идеи алгоритма. 
+                На каждом шаге алгоритма k-й элемент по порядку всплывает на k-ю позицию справа.
+                Перебирая массив следующим образом, мы получим наибольший элемент справа, наименьший слева, более того, все элементы между ними также будут отсортированы.<br>
+                Теперь давайте оценим сложность алгоритма сортировки пузырьком, вычислив его асимптотику:<br>
+                Для каждого элемента алгоритм выполняет цикл от 0 до длины массива - 1. Что означает ~ O (N) итераций, каждая из которых содержит соответствующее количество итераций ~ O(1).
+                Итак, у нас есть O(1) * O (N) итераций для каждого элемента. В массиве имеется N элементов, что приводит к полной асимптотике O(N) * O(N).
+                $$ O(N\ ) \cdot O(N \ ) = O(N^2)$$
+                Мы докажем, что, хотя пузырьковая сортировка - самый простой алгоритм сортировки для написания, она определенно является одной из самых медленных. Пузырьковая сортировка используется в промышленном коде относительно редко.
+            </p>
+        </div>
+
+        <div class="theory-part">
+            <h2 class="en">
+                Insertion Sort Algorithm
+            </h2>
+            <h2 class="ru" style="display: none;">
+                Сортировка вставками
+            </h2>
+            <p>
+                <div class="image-wrapper">
+                    <img src="./assets/images/insert.png" alt="" srcset="">
+                </div>
+            </p>
+            <p class="en">
+                Let us give some breif description of the algorithm idea. 
+                On each step of the algorithm we take an element and insert it into the the left-most possible position.
+                After that we take the next element on the right, and repeat the same action.<br>
+                Now let us evaluate the difiiculty of the Insertion Sort algorithm by calculating it`s asymptotic:<br>
+                For each element the algorithm moves it into the left-most possible position by swapping elements (aka cyclic shifting a subarray one element to the left).
+                In the worst case it will be necessary to move an element from the right end to the leh left end of the array.<br> 
+                To sum up, for each element the algorithm makees O(N) swaps in the worst case. It leads to total asymptotic:
+                $$ O(N \ ) \cdot O(N \ )  = O(N^2 \ )$$
+                Insertion sort is slightly more difficult than Bubble Sort, however it does not have any significant profit in terms of performance. Insertion Sort algorithm is being used in production even more rarely than Bubble Sort.
+            </p>
+            <p class="ru" style="display: none;">
+                Давайте дадим краткое описание идеи алгоритма. 
+                На каждом шаге алгоритма мы берем элемент и вставляем его в самую левую возможную позицию.
+                После этого мы берем следующий элемент справа и повторяем то же действие.<br>
+                Теперь давайте оценим сложность алгоритма сортировки вставками, вычислив его асимптотику:<br>
+                Для каждого элемента алгоритм перемещает его в максимально левое возможное положение путем замены элементов (он же циклический сдвиг подмассива на один элемент влево).
+                В худшем случае необходимо будет переместить элемент из правого конца в левый конец массива.<br> 
+                Подводя итог, для каждого элемента алгоритм производит O (N) обменов в наихудшем случае. Это приводит к полной асимптотике:
+                $$ O(N\ ) \cdot O(N\ ) = O(N^2\ )$$
+                Сортировка вставками немного сложнее, чем сортировка пузырьком, однако она не дает какой-либо существенной выгоды с точки зрения производительности. Алгоритм сортировки вставками используется в промышленности еще реже, чем сортировка пузырьком.
+            </p>
+        </div>
+
+        <div class="theory-part">
+            <h2 class="en">
+                Quick Sort Algorithm
+            </h2>
+            <h2 class="ru" style="display: none;">
+                Быстрая сортировка
+            </h2>
+            <p>
+                <div class="image-wrapper">
+                    <img src="./assets/images/quick.png" alt="" srcset="">
+                </div>
+            </p>
+            <p class="en">
+                Let us give some breif description of the algorithm idea. 
+                QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways. The key process in quickSort is partition(). Target of partitions is, given an array and an element x of array as pivot, put x at its correct position in sorted array and put all smaller elements (smaller than x) before x, and put all greater elements (greater than x) after x. All this should be done in linear time. The partition algorithm is being called recursively for each part of splitted sub-array. Assuming that partition splits an array into two halfs of same lenth, we get the following time complexity on average:
+                $$ O(N\ ) \cdot O(log(N\ )) = O(N \cdot log(N))$$
+                $$ O(N\ ) \cdot O(N\ ) = O(N^2 \ ) $$
+                in the worst case.
+            </p>
+            <p class="ru" style="display: none;">
+                Давайте дадим краткое описание идеи алгоритма. 
+                Быстрая сортировка - это алгоритм, работающий по принципу "Разделяй и властвуй". Он выбирает элемент в качестве опорного и разбивает данный массив вокруг выбранного опорного. Существует множество различных версий быстрой сортировки, которые выбирают опорный элемент по-разному. Ключевым процессом в быстрой сортировке является partition(). Его цель состоит в том, чтобы, в отсортированном массиве поместить все меньшие элементы (меньше опорного) перед x и поместить все большие элементы (больше опорного) после x. Все это должно быть сделано за линейное время. Алгоритм разбиения вызывается рекурсивно для каждой части разделенного подмассива. Предполагая, что partition() разбивает массив на две половины одинаковой длины, мы получаем в среднем следующую временную сложность:
+                $$ O(N\ ) \cdot O(log(N\ )) = O(N \cdot log(N))$$
+                $$ O(N\ ) \cdot O(N\ ) = O(N^2\ ) $$
+                в худшем случае.
+            </p>
+        </div>
+
+        <div class="theory-part">
+            <h2 class="en">
+                Merge Sort Algorithm
+            </h2>
+            <h2 class="ru" style="display: none;">
+                Сортировка слиянием
+            </h2>
+            <p>
+                <div class="image-wrapper">
+                    <img src="./assets/images/merge.png" alt="" srcset="">
+                </div>
+            </p>
+            <p class="en">
+                The main principle behind the merge sort algorithm is the Divide and Conquer Principle. It means that this recursive algorithm deivides a given array into halves after that each half into semi-halves and so on until the array is been splitted into single elements. Than the merge procedure takes comes into the game. The basic idea is to merge two sorted arrays into one sorted array. This can be done by simply seting two iterators, one for each sub-array. Than we compare elements at the iterators and put the least/greatest into the final array. According to time complexity it takes
+                    $$ O(log(N\ )) \cdot O(N\ ) = O(N \cdot log(N))$$
+                    time and 
+                    $$ O(N\ )$$ memory.
+                    This algorithm is stable (does not change order of equal elements) and it always has the same time-complexity, while Quick Sort has a bad case.
+            </p>
+            <p class="ru" style="display: none;">
+                Основным принципом, лежащим в основе алгоритма сортировки слиянием, является принцип "Разделяй и властвуй". Это означает, что этот рекурсивный алгоритм делит данный массив на половины, после чего каждая половина делится на половинки и так далее, пока массив не будет разбит на отдельные элементы. Затем в игру вступает процедера слияния Merge(). Основная идея состоит в том, чтобы объединить два отсортированных массива в один отсортированный массив. Это можно сделать, просто установив два итератора, по одному для каждого подмассива. Затем мы сравниваем элементы на итераторах и помещаем наименьшее / наибольшее значение в конечный массив. Оценка сложности времени работы:
+                    $$ O(log(N\ )) \cdot O(N\ ) = O(N \cdot log(N))$$
+                    время и
+$$ O(N\ )$$ памяти.
+                    Этот алгоритм стабилен (не изменяет порядок равных элементов) и всегда имеет одинаковую временную сложность, в то время как быстрая сортировка имеет худший квадратичный случай.
+            </p>
+        </div>
+    </div>
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2022 Designed by Arina Rybakova</p>
+        </div>
+    </footer>
+</body>
+<script src="./assets/js/theme.js"></script>
+<script src="./assets/js/translate.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</html>

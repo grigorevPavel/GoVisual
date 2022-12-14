@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link href="./assets/css/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="icon" type="image/png" href="./assets/images/icon_small.png">
+    <title>Go Visual</title>
+</head>
+<body>
+    <header>
+        <div class="title" id="title">
+            <div class="icon">
+                <img src="./assets/images/icon.gif" alt="" id="switch" onclick="Switch();">
+            </div>
+            <div class="name">
+                <a href="./index.html">Crypto Rental</a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li id="start-btn"><a href="./visual.html">Start</a></li>
+                
+                <li id="lang-switch">
+                    <label class="switch" onclick="SwitchLanguage();">
+                        <input type="checkbox">
+                        <span class="slider round" onclick="SwitchLanguage();"></span>
+                        <span class="labels" data-on="EN" data-off="RU" onclick="SwitchLanguage();"></span>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <div class="header-spacer"></div>
+        <div class="main">
+            <h1 class="en" style="display: none;">
+                <span style="color: var(--blue);">Crypto Rental</span> - an awesome service that hepls you <span style="color: var(--blue);">rent</span> a car or a flat for <span style="color: var(--blue);">crypto-currency</span> anywhere.
+            </h1>
+            <h1 class="ru">
+                <span style="color: var(--blue);">Crypto Rental</span> - потрясающий сервис, который поможет вам <span style="color: var(--blue);">арендовать</span> жилье и транспорт за <span style="color: var(--blue);">крипто-валюту</span> в любой точке мира.
+            </h1>
+            <div class="more en" style="display: none;">
+                <a onclick="ScrollTo(700, 0)">Learn More<i class="fas fa-angle-down"></i></a>
+            </div>
+            <div class="more ru">
+                <a onclick="ScrollTo(700, 0)">Подробнее<i class="fas fa-angle-down"></i></a>
+            </div>
+        </div>
+        <div class="description">
+            <h2 class="en" style="display: none;">
+                What do we offer?
+            </h2>
+            <h2 class="ru">
+                Что мы предлагаем?
+            </h2>
+            <p class="en" style="display: none;">
+                Nowadays, rapidly developing information technologies determine the standard of living of people. 
+                Progress in the field of information technology entails a constant need for programmers to learn new technology stacks and development principles. 
+                It is very difficult for novice programmers to study from scratch the entire array of knowledge invented by many generations in advance.<br><br>
+                The study of programming begins with the basics of algorithms and data structures. One of the basics of algorithms is sorting. 
+                The best way to understand how sorting works is by looking at the <span style="color: var(--blue);">visualization</span> of their work. 
+                Our project provides you with such an opportunity. We also took care of the <span style="color: var(--blue);">theory</span> of sorting algorithms. 
+                On our website, in the Learn tab, you will find <span style="color: var(--blue);">mini-articles</span> with the code of each of the demonstrated algorithms, a <span style="color: var(--blue);">mathematical justification</span> of the asymptotics of the <span style="color: var(--blue);">complexity</span> of their work and a comparison of the efficiency of sorting in various situations. 
+                We have tried to present the information as simply as possible, so that even a schoolboy could understand the material.
+            </p>
+            <p class="ru">
+                В настоящее время стремительно развивающиеся информационные технологии определяют уровень жизни людей. 
+                Прогресс в области информационных технологий влечет за собой постоянную потребность программистов в изучении новых технологических стеков и принципов разработки. 
+                Начинающим программистам нужно с нуля изучать весь массив знаний, придуманных многими поколениями заранее.<br><br>
+                Изучение программирования начинается с основ алгоритмов и структур данных. Одной из основ алгоритмов является сортировка. 
+                Лучший способ понять, как работает сортировка, - это взглянуть на <span style="color: var(--blue);">визуализацию</span> их работы. 
+                Наш проект предоставляет вам такую возможность. Мы также позаботились о <span style="color: var(--blue);">теории</span> алгоритмов сортировки. 
+                На нашем сайте, во вкладке Learn, вы найдете <span style="color: var(--blue);">мини-статьи</span> с кодом каждого из продемонстрированных алгоритмов, <span style="color: var(--blue);">математическое обоснование</span> асимптотики <span style="color: var(--blue);">сложности</span> их работы и сравнение эффективности сортировки в различных ситуациях. 
+                Мы постарались изложить информацию как можно проще, чтобы даже школьник мог разобраться в материале.
+            </p>
+        </div>
+        <div class="contacts">
+            <h2 class="en" style="display: none;">
+                Contacts
+            </h2>
+            <h2 class="ru">
+                Контакты
+            </h2>
+            <div class="info">
+                <div class="person en" style="display: none;">
+                    <img src="./assets/images/pavel.jpg.png" alt="">
+                    <div class="name">
+                        Arina Rybakova
+                    </div>
+                    <div class="role">
+                        Full-stack developer <br> Idea creator
+                    </div>
+                    <div class="links">
+                        @Arina_1506<br>
+                        +7 (903) 624-73-43
+                    </div>
+                </div>
+                <div class="person ru">
+                    <img src="./assets/images/pavel.jpg.png" alt="">
+                    <div class="name">
+                        Арина Рыбакова
+                    </div>
+                    <div class="role">
+                        Фулстек-разработчик <br> Автор идеи
+                    </div>
+                    <div class="links">
+                        @Arina_1506<br>
+                        +7 (903) 624-73-43
+                    </div>
+                </div>
+                <div class="person en" style="display: none;">
+                    <img src="./assets/images/pavel.jpg.png" alt="">
+                    <div class="name">
+                        Anna Terekhina
+                    </div>
+                    <div class="role">
+                        Teacher & Mentor
+                    </div>
+                    <div class="links">
+                        +7 (916) 162-61-92
+                    </div>
+                </div>
+                <div class="person ru">
+                    <img src="./assets/images/pavel.jpg.png" alt="">
+                    <div class="name">
+                        Анна Терехина
+                    </div>
+                    <div class="role">
+                        Преподаватель & Наставник
+                    </div>
+                    <div class="links">
+                        +7 (916) 162-61-92
+                    </div>
+                </div>
+                <div class="person ru">
+                    <img src="./assets/images/pavel.jpg.png" alt="">
+                    <div class="name">
+                        Павел Григорьев
+                    </div>
+                    <div class="role">
+                        Преподаватель & Наставник
+                    </div>
+                    <div class="links">
+                        @grigorev1803<br>
+                        @https://github.com/grigorevPavel<br>
+                        +7 (915) 232-01-83
+                    </div>
+                </div>
+                <div class="person en" style="display: none;">
+                    <img src="./assets/images/pavel.jpg.png" alt="">
+                    <div class="name">
+                        Pavel Grigorev
+                    </div>
+                    <div class="role">
+                        Teacher & Mentor
+                    </div>
+                    <div class="links">
+                        @grigorev1803<br>
+                        @https://github.com/grigorevPavel<br>
+                        +7 (915) 232-01-83
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2022 Designed by Arina Rybakova</p>
+        </div>
+    </footer>
+</body>
+<script src="./assets/js/theme.js"></script>
+<script src="./assets/js/translate.js"></script>
+<script>
+    function ScrollTo(top, left) {
+        window.scroll({
+            top: top, 
+            left: left, 
+            behavior: 'smooth'
+        });
+    }
+</script>
+</html>

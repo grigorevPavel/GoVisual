@@ -1,0 +1,423 @@
+.wrapper .main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
+    background-color: var(--black);
+    margin: 50px 0;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 
+        0 0 15px var(--blue);
+}
+
+.wrapper .main h1 {
+    color: var(--white);
+    font-size: 40px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+.wrapper .main .settings {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 20px;
+    min-height: 255px;
+}
+
+.main .dropdown {
+    z-index: 10;
+    width: 300px;
+    background-color: var(--black);
+    border: 2px solid var(--white);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .dropdown .dropdown-select {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.main .dropdown .item {
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease 0.0s;
+}
+
+.main .dropdown .list {
+    transition: all 0.3s ease 0.0s;
+}
+
+.main .dropdown .item a {
+    cursor: pointer;
+    color: var(--white);
+    font-size: 18px;
+}
+
+.main .dropdown .item:hover {
+    transform: scale(1.1);
+}
+
+.main .dropdown:hover {
+    box-shadow: 
+        0 0 10px var(--blue),
+        0 0 25px var(--blue);
+}
+
+.main .array-stats {
+    width: calc(100% - 350px);
+}
+
+.main .array {
+    width: 100%;
+    background-color: var(--black);
+    border: 2px solid var(--white);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .array input {
+    background-color: var(--black);
+    width: 100%;
+    height: 40px;
+    font-size:25px;
+    color: var(--white);
+}
+
+.main .array:hover {
+    box-shadow: 
+        0 0 10px var(--blue),
+        0 0 25px var(--blue);
+}
+
+.main .box {
+    width: 100%;
+    height: 0px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.main .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.main .start {
+    width: 150px;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 30px;
+    transition: all 0.3s ease 0.0s;
+    cursor: pointer;
+}
+
+.main .start:hover, .main .stop:hover {
+    transform: scale(1.1);
+}
+
+#reset {
+    display: none;
+}
+
+.main .stop {
+    display: none;
+    width: 150px;
+    background-color: red;
+    color: var(--white);
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 30px;
+    transition: all 0.3s ease 0.0s;
+    cursor: pointer;
+}
+
+.main .bar {
+    width: 95%;
+    background: linear-gradient(to top, var(--gray), var(--blue));
+    border-radius: 20px;
+}
+
+.main .statistics {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main .actions, .main .swaps {
+    width: 100%;
+    color: var(--white);
+    font-size: 25px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.main .buttons-settings {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.main .order, .main .random {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .order-btn, .main .random-btn {
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 25px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.main .order-btn:hover, .main .random-btn:hover {
+    box-shadow: 
+        0 0 10px var(--blue),
+        0 0 25px var(--blue);
+}
+
+.main .delay {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--white);
+    font-size: 18px;
+}
+
+.main input[type="range"] {
+    min-width: 200px;
+    padding: 3px;
+    background-color: var(--black);
+    border: 2px solid var(--white);
+    border-radius: 20px;
+    outline: none;
+    z-index: 1;
+}
+
+.main input[type="range"]:hover {
+    box-shadow: 
+        0 0 10px var(--blue),
+        0 0 25px var(--blue);
+}
+
+.main input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 35px;
+    width: 35px;
+    background-color: var(--blue);
+    border-radius: 50%;
+    z-index: 10;
+}
+
+@media only screen and (max-width: 1340px) {
+    .main .buttons-settings {
+        flex-direction: column;
+        gap: 0px;
+        padding: 0;
+    }
+    .main .order, .main .random, .main .delay {
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 1340px) {
+    .main .order, .main .random{
+        padding: 20px;
+    }
+    .main .delay {
+        padding-top: 35px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .wrapper .main {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+        background-color: var(--black);
+        margin: 50px 0;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 
+            0 0 15px var(--blue);
+    }
+
+    .wrapper .main h1 {
+        color: var(--white);
+        font-size: 30px;
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .wrapper .main .settings {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-top: 10px;
+    }
+    
+    .main .dropdown {
+        z-index: 10;
+        width: 100%;
+        background-color: var(--black);
+        border: 2px solid var(--white);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        color: var(--white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .main .array-stats {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .main .buttons-settings {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+        padding-top: 5px;
+    }
+    
+    .main .actions, .main .swaps {
+        width: 100%;
+        color: var(--white);
+        font-size: 20px;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .main .order-btn, .main .random-btn {
+        color: var(--white);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: 2px solid white;
+        cursor: pointer;
+    }
+    .main .array input {
+        background-color: var(--black);
+        width: 100%;
+        height: 30px;
+        font-size:20px;
+        color: var(--white);
+    }
+    .main input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 30px;
+        width: 30px;
+        background-color: var(--blue);
+        border-radius: 50%;
+        z-index: 10;
+    }
+    
+    .main .order, .main .random, .main .delay {
+        padding: 5px;
+    }
+    .main .start {
+        width: 80px;
+        background-color: var(--blue);
+        color: var(--white);
+        padding: 5px;
+        font-size: 20px;
+        border-radius: 20px;
+        transition: all 0.3s ease 0.0s;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+    .main .stop {
+        display: none;
+        width: 80px;
+        background-color: red;
+        color: var(--white);
+        padding: 5px;
+        font-size: 20px;
+        border-radius: 20px;
+        transition: all 0.3s ease 0.0s;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    .main .buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+}

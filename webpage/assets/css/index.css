@@ -1,0 +1,145 @@
+.wrapper .main {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 120px);
+    text-align: center;
+    gap: 50px;
+}
+
+.wrapper .main h1 {
+    color: var(--white);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.main .more a{
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease 0.0s;
+}
+
+.main .more a:hover {
+    transform: scale(1.1);
+}
+
+.main .more a i {
+    color: var(--white);
+    width: 20px;
+    height: 20px;
+}
+
+.wrapper .description, .wrapper .contacts {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid var(--white);
+    padding: 40px 0;
+}
+
+.wrapper .label h2 {
+    width: 100%;
+}
+
+.wrapper .description h2, .wrapper .contacts h2 {
+    color: var(--white);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.wrapper .description p {
+    padding-top: 50px;
+    color: var(--white);
+    font-size: 20px;
+    line-height: 35px;
+    font-weight: lighter;
+    text-align: left;
+}
+
+.wrapper .contacts .info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.wrapper .contacts .person {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    color: var(--white);
+    text-align: center;
+    font-size: 18px;
+}
+
+.wrapper .contacts .person img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    padding: 20px;
+}
+
+.block {
+    width: 80%;
+    height: 500px;
+    background-color: var(--white);
+    border: 2px solid var(--black);
+}
+
+@media only screen and (max-width: 480px) {
+    .wrapper .main {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: calc(100vh - 95px);
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .wrapper .main h1 {
+        color: var(--white);
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .main .more {
+        padding-top: 20px;
+    }
+    .wrapper .contacts .info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 50px;
+    }
+    .wrapper .contacts .person {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        color: var(--white);
+        text-align: center;
+        font-size: 18px;
+        padding-bottom: 20px;
+    }
+
+}
